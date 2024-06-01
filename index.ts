@@ -1,1 +1,8 @@
-console.log("Hello via Bun!");
+import app from "./server/app";
+
+Bun.serve({
+  hostname: "0.0.0.0",
+  fetch: app.fetch
+});
+
+console.log("server running");
